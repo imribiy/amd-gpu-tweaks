@@ -44,6 +44,19 @@ Windows Registry Editor Version 5.00
 "Tessellation_OPTION"=hex(3):32,00
 "EQAA"=hex(3):30,00
 
+[HKEY_LOCAL_MACHINE\System\ControlSet001\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000]
+"PP_ThermalAutoThrottlingEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\System\ControlSet001\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000\UMD]
+"TextureOpt_DEF"="0x3100"
+"Main3D_DEF"="1"
+"FlipQueueSize"=hex(3):31,00
+"Tessellation_DEF"="0"
+"Main3D"=hex(3):31,00
+"TFQ"="2"
+"LodAdj"="0"
+"Tessellation_OPTION_DEF"="2"
+
 [HKEY_LOCAL_MACHINE\System\ControlSet001\Services\amdwddmg]
 "ChillEnabled"=dword:00000000
 
