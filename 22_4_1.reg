@@ -4,11 +4,9 @@ Windows Registry Editor Version 5.00
 "Maximized"="false"
 "AutoUpdateTriggered"=dword:00000000
 "PowerSaverAutoEnable_CUR"=dword:00000000
-"WindowSize"="1440,960"
 "BuildType"=dword:00000000
 "WizardProfile"="PROFILE_CUSTOM"
 "UserTypeWizardShown"=dword:00000001
-"LastPage"="settings/graphics/0/"
 "AutoUpdate"=dword:00000000
 "RSXBrowserUnavailable"="true"
 "SystemTray"="false"
