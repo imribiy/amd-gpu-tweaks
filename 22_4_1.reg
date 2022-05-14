@@ -1,5 +1,5 @@
 Windows Registry Editor Version 5.00
-
+;;Prepared by imribiy#0001
 [HKEY_CURRENT_USER\Software\AMD\CN]
 "Maximized"="false"
 "AutoUpdateTriggered"=dword:00000000
