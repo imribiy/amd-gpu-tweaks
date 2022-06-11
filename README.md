@@ -4,4 +4,4 @@ Already modded drivers from Pablerso: https://github.com/Pablerso/AMD-Drivers-Mo
 
 If you want to strip the driver yourself, here is the @amitxvv's guide https://docs.google.com/document/d/1Vd5WKWhm77sG8o9xBoSNRuAWRTavLqynJ7aQhVrsa8Y
 
-**If you are using 2022 drivers, please use New AMD.reg, some DWORDs have changed on new drivers and using old DWORDs will break some functions**
+**AMD Have changed their DWORDs at somewhere, I don't know specific version when AMD dwords have changed, but if you are using 22.xx.xx drivers, go with new version batch file.**
