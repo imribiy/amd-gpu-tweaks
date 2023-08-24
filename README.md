@@ -1,7 +1,6 @@
-There is no fancy and secret DWORDs for AMD gpus, some people will try to sell you some "secret" keys, don't fall for them.
+### All in one one click AMD GPU DWORDs for your system. Useful for "Driver Only" installations or stripped drivers.
 
-Already modded drivers from Pablerso: https://github.com/Pablerso/AMD-Drivers-Modded
+Modded drivers from Amernimez: https://www.amernimezone.com/
+Modded drivers from Pablerso: https://github.com/Pablerso/AMD-Drivers-Modded (Legacy, will not support many new titles)
 
-If you want to strip the driver yourself, here is the @amitxvv's guide https://docs.google.com/document/d/1Vd5WKWhm77sG8o9xBoSNRuAWRTavLqynJ7aQhVrsa8Y
-
-**AMD Have changed their DWORDs at somewhere, I don't know specific version when AMD dwords have changed, but if you are using 22.xx.xx drivers, go with new version batch file.**
+If you want to strip the driver yourself, here is the @amitxvv's guide https://github.com/amitxv/PC-Tuning/blob/main/docs/configure-amd.md
