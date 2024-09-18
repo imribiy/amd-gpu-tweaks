@@ -1,7 +1,20 @@
-@echo Off
+@echo off
+:: Ensure admin privileges
+fltmc >nul 2>&1 || (
+    echo Administrator privileges are required.
+    PowerShell Start -Verb RunAs '%0' 2> nul || (
+        echo Right-click on the script and select "Run as administrator".
+        pause & exit 1
+    )
+    exit 0
+)
+:: Initialize environment
+setlocal EnableExtensions DisableDelayedExpansion
+
 ::Made by imribiy
-::Last updated 24.08.2023
+::Last updated 18.09.2024
 ::https://github.com/imribiy/amd-gpu-tweaks
+
 Reg.exe add "HKCU\Software\AMD\CN" /v "AutoUpdateTriggered" /t REG_DWORD /d "0" /f > nul 2>&1 > nul 2>&1
 Reg.exe add "HKCU\Software\AMD\CN" /v "PowerSaverAutoEnable_CUR" /t REG_DWORD /d "0" /f > nul 2>&1
 Reg.exe add "HKCU\Software\AMD\CN" /v "BuildType" /t REG_DWORD /d "0" /f > nul 2>&1
@@ -17,7 +30,6 @@ Reg.exe add "HKCU\Software\AMD\CN\OverlayNotification" /v "AlreadyNotified" /t R
 Reg.exe add "HKCU\Software\AMD\CN\VirtualSuperResolution" /v "AlreadyNotified" /t REG_DWORD /d "1" /f > nul 2>&1
 Reg.exe add "HKCU\Software\AMD\DVR" /v "PerformanceMonitorOpacityWA" /t REG_DWORD /d "0" /f > nul 2>&1
 Reg.exe add "HKCU\Software\AMD\DVR" /v "DvrEnabled" /t REG_DWORD /d "1" /f > nul 2>&1
-Reg.exe add "HKCU\Software\AMD\DVR" /v "ActiveSceneId" /t REG_SZ /d "0" /f > nul 2>&1
 Reg.exe add "HKCU\Software\AMD\DVR" /v "PrevInstantReplayEnable" /t REG_DWORD /d "0" /f > nul 2>&1
 Reg.exe add "HKCU\Software\AMD\DVR" /v "PrevInGameReplayEnabled" /t REG_DWORD /d "0" /f > nul 2>&1
 Reg.exe add "HKCU\Software\AMD\DVR" /v "PrevInstantGifEnabled" /t REG_DWORD /d "0" /f > nul 2>&1
@@ -116,4 +128,9 @@ Reg.exe add "HKLM\System\CurrentControlSet\Services\AMD External Events Utility"
 Reg.exe add "HKLM\System\CurrentControlSet\Services\amdfendr" /v "Start" /t REG_DWORD /d "4" /f > nul 2>&1
 Reg.exe add "HKLM\System\CurrentControlSet\Services\amdfendrmgr" /v "Start" /t REG_DWORD /d "4" /f > nul 2>&1
 Reg.exe add "HKLM\System\CurrentControlSet\Services\amdlog" /v "Start" /t REG_DWORD /d "4" /f > nul 2>&1
+:: Pause the script to view the final state
 pause
+:: Restore previous environment settings
+endlocal
+:: Exit the script successfully
+exit /b 0
