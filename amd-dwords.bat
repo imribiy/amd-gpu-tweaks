@@ -110,10 +110,11 @@ reg add "%target%" /v "DalDisableClockGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DalDisableDeepSleep" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DalDisableDiv2" /t REG_DWORD /d 1 /f
 
-Reg.exe add "HKLM\System\CurrentControlSet\Services\AMD Crash Defender Service" /v "Start" /t REG_DWORD /d "4" /f > nul 2>&1
-Reg.exe add "HKLM\System\CurrentControlSet\Services\amdfendr" /v "Start" /t REG_DWORD /d "4" /f > nul 2>&1
-Reg.exe add "HKLM\System\CurrentControlSet\Services\amdfendrmgr" /v "Start" /t REG_DWORD /d "4" /f > nul 2>&1
-Reg.exe add "HKLM\System\CurrentControlSet\Services\amdlog" /v "Start" /t REG_DWORD /d "4" /f > nul 2>&1
+set "Root=HKLM\System\CurrentControlSet\Services"
+
+for %%S in ("AMD Crash Defender Service" "amdfendr" "amdfendrmgr" "amdlog") do (
+    reg query "%Root%\%%~S" >nul 2>&1 && Reg add "%Root%\%%~S" /v "Start" /t REG_DWORD /d "4" /f >nul 2>&1
+)
 
 
 :: MPO Fix (Global DWM Key)
@@ -125,3 +126,4 @@ echo SUCCESS: All optimizations applied.
 echo You must RESTART your PC for changes to take effect.
 echo =========================================================
 pause
+
