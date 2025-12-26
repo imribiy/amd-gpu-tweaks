@@ -44,9 +44,9 @@ reg add "%target%" /v "ShowReleaseNotes" /t REG_DWORD /d 0 /f
 reg add "%target%" /v "ECCMode" /t REG_DWORD /d 0 /f
 
 reg add "%target%" /v "StutterMode" /t REG_DWORD /d 0 /f
-reg add "%target%" /v "DisableLTR" /t REG_DWORD /d 1 /f
-reg add "%target%" /v "BGM_EnableLTR" /t REG_DWORD /d 0 /f
-reg add "%target%" /v "PP_EnableDynamicLTRSupport" /t REG_DWORD /d 0 /f
+::reg add "%target%" /v "DisableLTR" /t REG_DWORD /d 1 /f
+::reg add "%target%" /v "BGM_EnableLTR" /t REG_DWORD /d 0 /f
+::reg add "%target%" /v "PP_EnableDynamicLTRSupport" /t REG_DWORD /d 0 /f
 reg add "%target%" /v "KMD_EnableAmdFendrOptions" /t REG_DWORD /d 0 /f
 reg add "%target%" /v "KMD_ChillEnabled" /t REG_DWORD /d 0 /f
 reg add "%target%" /v "KMD_DeLagEnabled" /t REG_DWORD /d 1 /f
@@ -149,6 +149,7 @@ echo SUCCESS: All optimizations applied.
 echo You must RESTART your PC for changes to take effect.
 echo =========================================================
 pause
+
 
 
 
