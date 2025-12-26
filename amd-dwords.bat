@@ -95,6 +95,12 @@ reg add "%target%" /v "EnableVceSwClockGating" /t REG_DWORD /d 0 /f
 reg add "%target%" /v "EnableUvdClockGating" /t REG_DWORD /d 0 /f
 reg add "%target%" /v "EnableGfxClockGatingThruSmu" /t REG_DWORD /d 0 /f
 reg add "%target%" /v "EnableSysClockGatingThruSmu" /t REG_DWORD /d 0 /f
+reg add "%target%" /v "DisableXdmaSclkGating" /t REG_DWORD /d 1 /f
+reg add "%target%" /v "DalFineGrainClockGating" /t REG_DWORD /d 0 /f
+reg add "%target%" /v "DisableRomMediumGrainClockGating" /t REG_DWORD /d 1 /f
+reg add "%target%" /v "DisableNbioMediumGrainClockGating" /t REG_DWORD /d 1 /f
+reg add "%target%" /v "DisableMcMediumGrainClockGating" /t REG_DWORD /d 1 /f
+reg add "%target%" /v "IRQMgrDisableIHClockGating" /t REG_DWORD /d 1 /f
 
 reg add "%target%" /v "DisableGfxMGLS" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableHdpClockPowerGating" /t REG_DWORD /d 1 /f
@@ -143,7 +149,6 @@ echo SUCCESS: All optimizations applied.
 echo You must RESTART your PC for changes to take effect.
 echo =========================================================
 pause
-
 
 
 
