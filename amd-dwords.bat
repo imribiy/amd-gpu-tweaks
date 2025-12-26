@@ -9,7 +9,7 @@ if %errorlevel% NEQ 0 (
 )
 
 ::Made by imribiy
-::Last updated 12.19.2025
+::Last updated 12.25.2025
 ::https://github.com/imribiy/amd-gpu-tweaks
 
 echo
@@ -83,9 +83,13 @@ reg add "%target%" /v "DisableAspmL1" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableGfxClockGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableAllClockGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableSysClockGating" /t REG_DWORD /d 1 /f
+reg add "%target%" /v "DisableVceClockGating" /t REG_DWORD /d 1 /f
+reg add "%target%" /v "DisableSamuClockGating" /t REG_DWORD /d 1 /f
+reg add "%target%" /v "DisableRomMGCGClockGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableGfxCoarseGrainClockGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableGfxMediumGrainClockGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableGfxFineGrainClockGating" /t REG_DWORD /d 1 /f
+reg add "%target%" /v "DisableHdpMGClockGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableGfxMGCG" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "EnableVceSwClockGating" /t REG_DWORD /d 0 /f
 reg add "%target%" /v "EnableUvdClockGating" /t REG_DWORD /d 0 /f
@@ -101,6 +105,16 @@ reg add "%target%" /v "DisableUVDPowerGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableVCEPowerGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableAcpPowerGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableDrmdmaPowerGating" /t REG_DWORD /d 1 /f
+reg add "%target%" /v "DisableGfxCGPowerGating" /t REG_DWORD /d 1 /f
+reg add "%target%" /v "DisableStaticGfxMGPowerGating" /t REG_DWORD /d 1 /f
+reg add "%target%" /v "DisableDynamicGfxMGPowerGating" /t REG_DWORD /d 1 /f
+reg add "%target%" /v "DisableCpPowerGating" /t REG_DWORD /d 1 /f
+reg add "%target%" /v "DisableGDSPowerGating" /t REG_DWORD /d 1 /f
+reg add "%target%" /v "DisableXdmaPowerGating" /t REG_DWORD /d 1 /f
+reg add "%target%" /v "DisableGFXPipelinePowerGating" /t REG_DWORD /d 1 /f
+reg add "%target%" /v "DisableQuickGfxMGPowerGating" /t REG_DWORD /d 1 /f
+reg add "%target%" /v "DisablePowerGating" /t REG_DWORD /d 1 /f
+reg add "%target%" /v "DisableGDSPowerGating" /t REG_DWORD /d 1 /f
 
 reg add "%target%" /v "SMU_DisableMmhubPowerGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "SMU_DisableAthubPowerGating" /t REG_DWORD /d 1 /f
@@ -109,6 +123,9 @@ reg add "%target%" /v "DalForceMaxDisplayClock" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DalDisableClockGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DalDisableDeepSleep" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DalDisableDiv2" /t REG_DWORD /d 1 /f
+
+reg add "%target%" /v "EnableSpreadSpectrum" /t REG_DWORD /d 0 /f
+
 
 set "Root=HKLM\System\CurrentControlSet\Services"
 
@@ -126,5 +143,6 @@ echo SUCCESS: All optimizations applied.
 echo You must RESTART your PC for changes to take effect.
 echo =========================================================
 pause
+
 
 
