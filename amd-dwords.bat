@@ -125,7 +125,7 @@ reg add "%target%" /v "DalDisableDeepSleep" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DalDisableDiv2" /t REG_DWORD /d 1 /f
 
 reg add "%target%" /v "EnableSpreadSpectrum" /t REG_DWORD /d 0 /f
-
+reg add "%target%" /v "EnableVcePllSpreadSpectrum" /t REG_DWORD /d 0 /f
 
 set "Root=HKLM\System\CurrentControlSet\Services"
 
@@ -143,6 +143,7 @@ echo SUCCESS: All optimizations applied.
 echo You must RESTART your PC for changes to take effect.
 echo =========================================================
 pause
+
 
 
 
