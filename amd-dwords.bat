@@ -41,7 +41,7 @@ reg add "%target%" /v "ReportAnalytics" /t REG_DWORD /d 0 /f
 reg add "%target%" /v "NotifySubscription" /t REG_DWORD /d 0 /f
 reg add "%target%" /v "AllowSubscription" /t REG_DWORD /d 0 /f
 reg add "%target%" /v "ShowReleaseNotes" /t REG_DWORD /d 0 /f
-reg add "%target%" /v "ECCMode" /t REG_DWORD /d 0 /f
+::reg add "%target%" /v "ECCMode" /t REG_DWORD /d 0 /f
 
 reg add "%target%" /v "StutterMode" /t REG_DWORD /d 0 /f
 ::reg add "%target%" /v "DisableLTR" /t REG_DWORD /d 1 /f
@@ -63,10 +63,10 @@ reg add "%target%" /v "PP_SclkDeepSleepDisable" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "PP_GfxOffControl" /t REG_DWORD /d 0 /f
 reg add "%target%" /v "PP_ThermalAutoThrottlingEnable" /t REG_DWORD /d 0 /f
 reg add "%target%" /v "PP_EnableRaceToIdle" /t REG_DWORD /d 0 /f
-reg add "%target%" /v "PP_SclkDpmDisabled" /t REG_DWORD /d 1 /f
-reg add "%target%" /v "PP_MclkDpmDisabled" /t REG_DWORD /d 1 /f
-reg add "%target%" /v "PP_SocclkDpmDisabled" /t REG_DWORD /d 1 /f
-reg add "%target%" /v "PP_PcieDpmDisabled" /t REG_DWORD /d 1 /f
+::reg add "%target%" /v "PP_SclkDpmDisabled" /t REG_DWORD /d 1 /f
+::reg add "%target%" /v "PP_MclkDpmDisabled" /t REG_DWORD /d 1 /f
+::reg add "%target%" /v "PP_SocclkDpmDisabled" /t REG_DWORD /d 1 /f
+::reg add "%target%" /v "PP_PcieDpmDisabled" /t REG_DWORD /d 1 /f
 
 reg add "%target%" /v "EnableUlps" /t REG_DWORD /d 0 /f
 reg add "%target%" /v "EnableUlps_NA" /t REG_SZ /d "0" /f
@@ -81,8 +81,8 @@ reg add "%target%" /v "DisableAspmL0s" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableAspmL1" /t REG_DWORD /d 1 /f
 
 reg add "%target%" /v "DisableGfxClockGating" /t REG_DWORD /d 1 /f
-reg add "%target%" /v "DisableAllClockGating" /t REG_DWORD /d 1 /f
-reg add "%target%" /v "DisableSysClockGating" /t REG_DWORD /d 1 /f
+::reg add "%target%" /v "DisableAllClockGating" /t REG_DWORD /d 1 /f
+::reg add "%target%" /v "DisableSysClockGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableVceClockGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableSamuClockGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableRomMGCGClockGating" /t REG_DWORD /d 1 /f
@@ -90,7 +90,7 @@ reg add "%target%" /v "DisableGfxCoarseGrainClockGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableGfxMediumGrainClockGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableGfxFineGrainClockGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableHdpMGClockGating" /t REG_DWORD /d 1 /f
-reg add "%target%" /v "DisableGfxMGCG" /t REG_DWORD /d 1 /f
+::reg add "%target%" /v "DisableGfxMGCG" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "EnableVceSwClockGating" /t REG_DWORD /d 0 /f
 reg add "%target%" /v "EnableUvdClockGating" /t REG_DWORD /d 0 /f
 reg add "%target%" /v "EnableGfxClockGatingThruSmu" /t REG_DWORD /d 0 /f
@@ -104,9 +104,9 @@ reg add "%target%" /v "IRQMgrDisableIHClockGating" /t REG_DWORD /d 1 /f
 
 reg add "%target%" /v "DisableGfxMGLS" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableHdpClockPowerGating" /t REG_DWORD /d 1 /f
-reg add "%target%" /v "DisableGmcPowerGating" /t REG_DWORD /d 1 /f
-reg add "%target%" /v "DisableSDMAPowerGating" /t REG_DWORD /d 1 /f
-reg add "%target%" /v "DisableSAMUPowerGating" /t REG_DWORD /d 1 /f
+::reg add "%target%" /v "DisableGmcPowerGating" /t REG_DWORD /d 1 /f
+::reg add "%target%" /v "DisableSDMAPowerGating" /t REG_DWORD /d 1 /f
+::reg add "%target%" /v "DisableSAMUPowerGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableUVDPowerGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableVCEPowerGating" /t REG_DWORD /d 1 /f
 reg add "%target%" /v "DisableAcpPowerGating" /t REG_DWORD /d 1 /f
@@ -149,6 +149,7 @@ echo SUCCESS: All optimizations applied.
 echo You must RESTART your PC for changes to take effect.
 echo =========================================================
 pause
+
 
 
 
