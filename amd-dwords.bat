@@ -9,7 +9,7 @@ if %errorlevel% NEQ 0 (
 )
 
 ::Made by imribiy
-::Last updated 12.25.2025
+::Last updated 01/04/2026
 ::https://github.com/imribiy/amd-gpu-tweaks
 
 echo
@@ -149,6 +149,7 @@ echo SUCCESS: All optimizations applied.
 echo You must RESTART your PC for changes to take effect.
 echo =========================================================
 pause
+
 
 
 
